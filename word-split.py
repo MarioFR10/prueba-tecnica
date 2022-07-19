@@ -3,7 +3,9 @@ import sys
 
 def word_split(str_arr):
     """ 
-
+        Splits a possible compound word into 2 existing words in a set of words
+        Inputs: str_arr -> first arg (compound word: string) second arg (csv of existing words: string)
+        Output: csv splitted word or not possible splitted word combination message
     """
     words = str_arr[1].split(",")
     # word dictionary to access possible words in O(1) time
@@ -26,7 +28,6 @@ def word_split(str_arr):
     return "The string is not possible"
 
 if __name__ == "__main__":
-
     string = sys.argv[1]
     string_array = sys.argv[2]
     print(word_split([string, string_array]))
